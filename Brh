@@ -1,0 +1,39 @@
+package bruh;
+/* Wap to create a menu driven program and take n as input to print two series 1.(1,2,4,7,11..)
+ * 2.(0,1,1,2,3,5...)*/
+import java.util.*;
+public class sampli 
+{
+	public static void main(String[]Args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter n");
+		System.out.println("Enter c for 1,2,4,7,11 and b for 0,1,1,2,3,5..");
+		int n=sc.nextInt();
+		char f=sc.next().charAt(0);
+		switch(f) 
+		{
+		case 'c':
+			int h=1;
+			for(int g=0;g<=n;g++)
+			{
+				h+=g;
+				System.out.print(h+" ");
+			}
+			break;
+		case 'b':
+			int n1=0,n2=1;
+			int n3;
+			for(int i=1;i<=n;i++) 
+			{
+				n3=n1+n2;
+				System.out.println(n3+" ");
+				n1=n2;
+				n2=n3;
+			}
+			break;
+		default:
+			System.out.println("Invalid choice");
+		}
+	}
+}
